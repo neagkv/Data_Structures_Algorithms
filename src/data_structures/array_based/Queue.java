@@ -3,8 +3,7 @@ package data_structures.array_based;
 
 public class Queue {
 
-// Define initial array to hold queue data
-
+    // Define initial array to hold queue data
     private int[] quequeArray;
 
     //Define put location and get location variables
@@ -20,7 +19,7 @@ public class Queue {
        getloc =0;
    }
 
-    //write put method that takes in an element ie int char and adds it to the array, incrementing put location afterwards
+    // put method that takes in an element and adds it to the array, incrementing put location afterwards
 
     void put(int index){
        if (putloc == quequeArray.length) {
