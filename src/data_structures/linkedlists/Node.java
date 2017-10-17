@@ -1,23 +1,23 @@
 package data_structures.linkedlists;
 
-public class Node {                                                 // Node class of objects stored in the linkedlist
+public class Node {
 
-    private int data1;                                              // instance variables for data each node
+    private int data1;
     private int data2;
     private int data3;
 
 
-    Node nextNode;                                                  // create a new nextNode variable
+    Node nextNode;
 
 
-    public Node(int data1, int data2, int data3) {                  //Node constructor
+    public Node(int data1, int data2, int data3) {
         this.data1 = data1;
         this.data2 = data2;
         this.data3 = data3;
     }
 
 
-    public Node(int data1, int data2, int data3, Node nextNode) {   //overloaded node constructor that  also includes next node
+    public Node(int data1, int data2, int data3, Node nextNode) {
         this.data1 = data1;
         this.data2 = data2;
         this.data3 = data3;
@@ -27,7 +27,7 @@ public class Node {                                                 // Node clas
 
     public int getData1() {
         return data1;
-    }                          // getters and setters for each variable
+    }
 
     public void setData1(int data1) {
         this.data1 = data1;

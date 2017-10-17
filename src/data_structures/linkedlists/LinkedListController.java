@@ -2,41 +2,41 @@ package data_structures.linkedlists;
 
 public class LinkedListController {
 
-    public static void main(String[] args) {                            //main method
+    public static void main(String[] args) {
 
 
-        LinkedList linkedList = new LinkedList();                       // create a new linkedlist
+        LinkedList linkedList = new LinkedList();
 
 
-        linkedList.addNode (38, 777, 65);           // add nodes to the linked list
+        linkedList.addNode (38, 777, 65);
         linkedList.addNode(66, 78, 1003);
         linkedList.addNode(65, 79, 888);
         linkedList.addNode(432, 2, 366);
 
 
 
-        linkedList.display();                                          // display the first set of data in each node
+        linkedList.display();
 
         System.out.println(
-                "Value of first node in LinkedList " + linkedList.newNode + "\n");  //print the value of the newNode in linkedlist
+                "Value of first node in LinkedList " + linkedList.head.getData1() + "\n");
 
 
-        linkedList.removeNewNode();                                     // remove node method to remove 432
+        linkedList.removeHead();
 
 
-        linkedList.display();                                           // display the first data sets after the node was deleted
+        linkedList.display();
 
 
-        System.out.println(                                            // try to find the node with data matching  432
-                linkedList.findNode(432).getData1()+ "was found.");
+        System.out.println(
+                linkedList.findNode(66).getData1()+ "was found.");
 
 
-        linkedList.removeNode(432);                         // remove the node if its value is 432
+        linkedList.removeNode(66);
 
         System.out.println("Node deletion exectuted");
 
 
-        linkedList.display();                                         //display the contents of the node again
+        linkedList.display();                                         
 
 
     }
