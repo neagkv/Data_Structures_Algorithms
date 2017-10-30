@@ -1,7 +1,6 @@
-package data_structures.linkedlists;
+package data_structures.genericLinkedList;
 
 public class LinkedListController {
-
     public static void main(String[] args) {
 
 
@@ -28,7 +27,7 @@ public class LinkedListController {
 
 
         System.out.println(
-                linkedList.findNode(66).getData1()+ "was found.");
+                linkedList.findNode(66).getData1()+ " " + "was found.");
 
 
         linkedList.removeNode(66);
