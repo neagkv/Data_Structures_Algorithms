@@ -2,21 +2,25 @@ package data_structures.linkedlists;
 
 public class LinkedList {
 
-
+    //node variable for the head node
     public Node head;
 
-
+    //linkedlist constructor that takes in the head node
     LinkedList(){
         head = null;
     }
 
-
+    // an is empty method that returns true if head is null
     public boolean isEmpty() {
 
         return (head == null);
     }
 
 
+    /*
+    add node method that takes in all the instances of the node class  and creates a new node object that contains that
+    data and calls the nextnode method that sets the new node object as the head and resets it as the node object
+     */
     public void addNode (int data1, int data2, int data3){
 
         Node node = new Node(data1, data2, data3);
@@ -25,10 +29,12 @@ public class LinkedList {
         head = node;
     }
 
+    //remove head method that returns a node object
    public Node removeHead() {
-
+       // set a noderef object as tne head
        Node nodeRef = head;
 
+       //if
        if (!isEmpty()) {
            head = head.nextNode;
        } else {
