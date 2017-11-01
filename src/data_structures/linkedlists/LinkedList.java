@@ -31,21 +31,29 @@ public class LinkedList {
 
     //remove head method that returns a node object
    public Node removeHead() {
-       // set a noderef object as tne head
+       // set a noderef object as the head
        Node nodeRef = head;
 
-       //if
+       //if the next node is not empty, reset the node as head and call the next node method on it to push it down a spot
        if (!isEmpty()) {
            head = head.nextNode;
        } else {
+           //if the next node is empty your linked list is next
            System.out.println("Empty LinkedList");
        }
+
+       //return the nodeRef
        return nodeRef;
    }
 
+
+   //remove node method that takes in the the data from the first node
    public void removeNode(int nodeData1) {
 
+
+       //create a current node object and set it eqaul to the head
        Node currentNode = head;
+       //create a prvious node object and set it equal to the head
        Node previousNode = head;
 
        while (currentNode.getData1() != nodeData1) {
