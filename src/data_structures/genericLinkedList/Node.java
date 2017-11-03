@@ -1,18 +1,18 @@
 package data_structures.genericLinkedList;
 
-public class Node {
-    private int data1;
-    private int data2;
-    private int data3;
-    private String dataName;
-    private byte dataid;
+public class Node<T> {
+    private T data1;
+    private T data2;
+    private T data3;
+    private T dataName;
+    private T dataid;
 
 
 
     Node nextNode;
 
 
-    public Node(int data1, int data2, int data3, String dataName, byte dataid, Node nextNode) {
+    public Node(T data1, T data2, T data3, T dataName, T dataid, Node nextNode) {
         this.data1 = data1;
         this.data2 = data2;
         this.data3 = data3;
@@ -22,7 +22,7 @@ public class Node {
 
     }
 
-    public Node(int data1, int data2, int data3, String dataName, byte dataid) {
+    public Node(T data1, T data2, T data3, T dataName, T dataid) {
         this.data1 = data1;
         this.data2 = data2;
         this.data3 = data3;
@@ -30,43 +30,43 @@ public class Node {
         this.dataid = dataid;
     }
 
-    public int getData1() {
+    public T getData1() {
         return data1;
     }
 
-    public void setData1(int data1) {
+    public void setData1(T data1) {
         this.data1 = data1;
     }
 
-    public int getData2() {
+    public T getData2() {
         return data2;
     }
 
-    public void setData2(int data2) {
+    public void setData2(T data2) {
         this.data2 = data2;
     }
 
-    public int getData3() {
+    public T getData3() {
         return data3;
     }
 
-    public void setData3(int data3) {
+    public void setData3(T data3) {
         this.data3 = data3;
     }
 
-    public String getDataName() {
+    public T getDataName() {
         return dataName;
     }
 
-    public void setDataName(String dataName) {
+    public void setDataName(T dataName) {
         this.dataName = dataName;
     }
 
-    public byte getDataid() {
+    public T getDataid() {
         return dataid;
     }
 
-    public void setDataid(byte dataid) {
+    public void setDataid(T dataid) {
         this.dataid = dataid;
     }
 

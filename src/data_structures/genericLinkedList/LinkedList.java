@@ -15,7 +15,7 @@ public class LinkedList <T> {
     }
 
 
-    public <T> void addNode (int data1, int data2, int data3, String dataName, byte dataId){
+    public <T> void addNode (T data1, T data2, T data3, String dataName, byte dataId){
 
         Node node = new Node(data1, data2, data3, dataName, dataId);
 
@@ -37,7 +37,7 @@ public class LinkedList <T> {
         return nodeRef;
     }
 
-    public <T> void removeNode(int nodeData1) {
+    public <T> void removeNode(T nodeData1) {
 
         Node currentNode = head;
         Node previousNode = head;
@@ -66,7 +66,7 @@ public class LinkedList <T> {
         }
     }
 
-    public  <T> Node findNode(int nodeData1) {
+    public  <T> Node findNode(T nodeData1) {
         Node node = head;
 
         if (!isEmpty()) {
