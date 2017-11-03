@@ -1,6 +1,6 @@
 package data_structures.genericLinkedList;
 
-public class LinkedList <T>{
+public class LinkedList <T> {
     public Node head;
 
 
@@ -15,15 +15,17 @@ public class LinkedList <T>{
     }
 
 
-    public void addNode (int data1, int data2, int data3){
+    public <T> void addNode (int data1, int data2, int data3, String dataName, byte dataId){
 
-        Node node = new Node(data1, data2, data3);
+        Node node = new Node(data1, data2, data3, dataName, dataId);
 
         node.nextNode = head;
         head = node;
     }
 
-    public Node removeHead() {
+
+
+    public <T> Node removeHead() {
 
         Node nodeRef = head;
 
@@ -35,7 +37,7 @@ public class LinkedList <T>{
         return nodeRef;
     }
 
-    public void removeNode(int nodeData1) {
+    public <T> void removeNode(int nodeData1) {
 
         Node currentNode = head;
         Node previousNode = head;
@@ -52,11 +54,11 @@ public class LinkedList <T>{
 
     }
 
-    public void display() {
+    public <T> void display() {
         Node node = head;
 
         while(node != null) {
-            System.out.println(node.getData1());
+            System.out.println(node.getDataid());
 
             node = node.nextNode;
 
@@ -64,7 +66,7 @@ public class LinkedList <T>{
         }
     }
 
-    public Node findNode(int nodeData1) {
+    public  <T> Node findNode(int nodeData1) {
         Node node = head;
 
         if (!isEmpty()) {

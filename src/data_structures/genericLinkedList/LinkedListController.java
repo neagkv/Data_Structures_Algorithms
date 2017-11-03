@@ -7,10 +7,10 @@ public class LinkedListController {
         LinkedList linkedList = new LinkedList();
 
 
-        linkedList.addNode (38, 777, 65);
-        linkedList.addNode(66, 78, 1003);
-        linkedList.addNode(65, 79, 888);
-        linkedList.addNode(432, 2, 366);
+        linkedList.addNode (38, 77, 65, "DataList one", (byte)1 );
+        linkedList.addNode(66, 78, 1003, "DataList two", (byte)2);
+        linkedList.addNode(65, 79, 888, "DataList three", (byte)3);
+        linkedList.addNode(432, 2, 366, "DataList four", (byte)4);
 
 
 
@@ -18,6 +18,9 @@ public class LinkedListController {
 
         System.out.println(
                 "Value of first node in LinkedList " + linkedList.head.getData1() + "\n");
+        System.out.println(
+                "The data name is" + linkedList.head.getDataName() + "\n");
+
 
 
         linkedList.removeHead();
