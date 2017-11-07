@@ -11,16 +11,16 @@ public class Node<T> {
 
     Node nextNode;
 
-
-    public Node(T data1, T data2, T data3, T dataName, T dataid, Node nextNode) {
-        this.data1 = data1;
-        this.data2 = data2;
-        this.data3 = data3;
-        this.dataName = dataName;
-        this.dataid = dataid;
-        this.nextNode = nextNode;
-
-    }
+//
+//    public Node(T data1, T data2, T data3, T dataName, T dataid, Node nextNode) {
+//        this.data1 = data1;
+//        this.data2 = data2;
+//        this.data3 = data3;
+//        this.dataName = dataName;
+//        this.dataid = dataid;
+//        this.nextNode = nextNode;
+//
+//    }
 
     public Node(T data1, T data2, T data3, T dataName, T dataid) {
         this.data1 = data1;
