@@ -21,17 +21,17 @@ public class HashMap {
         //get the hash code
         int hash = Math.abs(key.hashCode() % size);
         //create the student to add to the linked list
-        Student head = new Student(key, first_name, last_name);
+        Student student = new Student(key, first_name, last_name);
 
 
         //insert the student at the hash index
         if (map[hash] == null) {
-            map[hash] = head;
+            map[hash] = student;
 
         } else {
 
             //collision - this can happen because the array has a limited number of indexes,
-            //and even if the key is different, the has number can turn out the same;
+            //and even if the key is different, the hash number can turn out the same;
             //in this case we have to put object at the end of the linkedlist at index [hash]
             Student current = map[hash];
 
@@ -40,12 +40,12 @@ public class HashMap {
 
                 //check if the key already exists; this is because it is assumed
                 //that they key will never be duplicated
-                if (current.getKey().equals(head.getKey())) {
+                if (current.getKey().equals(student.getKey())) {
 
                     //replace the key's value with the new one if the key
                     //is duplicated
-                    current.setFirst_name(head.getFirst_name());
-                    current.setLast_name(head.getLast_name());
+                    current.setFirst_name(student.getFirst_name());
+                    current.setLast_name(student.getLast_name());
                     return;
                 }
 
@@ -55,7 +55,7 @@ public class HashMap {
 
             //when reached end of linked list, the next link in the
             //list becomes the newly created object
-            current.nextStudent = head;
+            current.nextStudent = student;
 
         }
     }
@@ -63,33 +63,47 @@ public class HashMap {
     //get method
     public Student get(String key) {
 
-        //get the has value
+        java.util.HashMap test = new java.util.HashMap();
+
+        //get the hash value
         int hash = Math.abs(key.hashCode() % size);
-        //search for the key in the linked list
-        Student s = map[hash];
+
         //if the key is not there
         if (map[hash] == null) {
 
             System.out.println("Key value not found");
+            return null;
 
         } else {
-            //while the key value is found in the hashmap
-            while (map[hash] != null) {
+
+            Student s;
+            do {
+                //search for the key in the linked list
+                s = map[hash];
+                //while the key value is found in the hashmap
 
                 if (s.getKey().equals(key)) {
                     //return the student object, which contains all its values
                     return s;
-
+                } else {
+                    //set the student object equal to the next student
+                    s = s.getNextStudent();
                 }
-
-                //set the student object equal to the next student
-                s = s.getNextStudent();
             }
-
+            while (s != null);
         }
         //Else return null
         return null;
     }
+
+    //remove method for hashmap
+    public Student remove(String Key) {
+
+
+
+
+    }
+
 }
 
 
