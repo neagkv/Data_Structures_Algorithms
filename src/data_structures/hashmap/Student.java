@@ -17,6 +17,9 @@ public class Student {
     //a student object in the student class that links to the next student object in the linked list
     Student nextStudent;
 
+    //a previous student object to be able remove a student
+    Student previousStrudent;
+
     //student constructor
     public Student(String key, String first_name, String last_name) {
         this.key = key;
