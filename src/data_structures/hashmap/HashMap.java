@@ -19,7 +19,7 @@ public class HashMap {
     public void put(String key, Student student) {
 
         //get the hash code
-        int hash = Math.abs(key.hashCode() % size);
+        int hash = Math.abs(key.hashCode() % (size));
 
         //insert the student at the hash index
         try {
@@ -59,7 +59,7 @@ public class HashMap {
                 student.previousStrudent = current;
 
             }
-            //will change to make null pointer exception tighter in the future
+            //will change to make null pointer exception tighter in the future, kinda cheating
         } catch (NullPointerException e) {
 
             System.out.println("Null Pointer Exception");
@@ -77,16 +77,15 @@ public class HashMap {
         if (map[hash] == null) {
 
             System.out.println("Key value not found");
+
             return null;
 
         } else {
 
             Student s;
 
+            s = map[hash];
             do {
-
-                s = map[hash];
-
 
                 if (s.getKey().equals(key)) {
 
@@ -120,7 +119,8 @@ public class HashMap {
 
                 return "index already empty";
             }
-        } catch(NullPointerException npe) {
+        } catch (NullPointerException npe) {
+
             return "index already empty";
         }
 
@@ -129,7 +129,7 @@ public class HashMap {
             // if they do not delete the initial element from array - set map[hash] = null
             map[hash] = null;
 
-            // if student does have a next student - go into linkedlist mode
+            // if student does have a next student - go into linkedlist node
         } else {
 
             // while student.nextStudent() != null
